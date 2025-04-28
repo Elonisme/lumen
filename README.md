@@ -29,7 +29,7 @@ $ mkdir themes
 $ cd themes
 $ git clone https://github.com/Elonisme/lumen.git
 ```
-编辑 `config.toml` 文件，设置 `theme="archie"`。
+编辑 `config.toml` 文件，设置 `theme="lumen"`。
 更多信息请参阅 Hugo 的官方 [安装指南](https://gohugo.io/installation/)。
 
 如果遇到 Google Analytics 问题，请将 Hugo 更新到 v0.125.0 或更高版本，并确保使用最新的主题版本。
