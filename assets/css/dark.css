@@ -3,6 +3,10 @@ body {
   background-color: #202124;
 }
 
+article {
+  background-color: #202124;
+}
+
 ::-moz-selection {
   background: blue;
   color: #fff;
@@ -18,18 +22,91 @@ body {
 hr {
   border-top: 3px dotted blue;
 }
-code {
-  background-color: lightblue;
-  color: black;
-  text-decoration: bold;
-  padding: 0.1em 0.2em;
-}
+
+/* Code blocks */
 pre {
-  background-color: #272822;
-  line-height: 1.4;
-  overflow-x: auto;
+  position: relative;
+  background-color: #1e1e1e;
+  color: #d4d4d4;
   padding: 1em;
+  border-radius: 10px;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 1rem;
+  line-height: 1.5;
+  overflow-x: auto;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5);
+  margin: 1.5em 0;
 }
+
+
+/* 代码内部样式 */
+code {
+  background-color: dodgerblue;
+  color: #f8f8f2;
+  border-radius: 4px;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 1rem;
+}
+
+/* 复制按钮 */
+.copy-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: #444;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 5px 10px;
+  cursor: pointer;
+  font-size: 0.8rem;
+  opacity: 0.7;
+  transition: background 0.3s, opacity 0.3s;
+}
+
+.copy-button:hover {
+  background: #ff9a00;
+  opacity: 1;
+}
+
+/* Toast提示 */
+.toast {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background: linear-gradient(135deg, #444, #222);
+  color: #fff;
+  padding: 12px 24px;
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.6);
+  font-size: 0.95rem;
+  opacity: 0;
+  transform: translateY(-30px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+  z-index: 9999;
+  pointer-events: none; /* 防止鼠标挡住页面 */
+}
+
+/* Toast出现时的动画效果 */
+.toast.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* 小屏幕适配 */
+@media (max-width: 768px) {
+  pre::before {
+    display: none;
+  }
+  .copy-button {
+    top: 8px;
+    right: 8px;
+    font-size: 0.7rem;
+    padding: 4px 8px;
+  }
+}
+
+
 blockquote {
   border-color: blue;
 }
@@ -189,4 +266,27 @@ a:hover {
   border-width: 3px;
   border-style: solid;
   border-color: #ffd700;
+}
+
+/* Images */
+img {
+  border: 3px solid #ececec;
+  max-width: 100%;
+  box-shadow: 0 4px 8px rgba(255, 255, 255, 0.5); /* 白色轻微阴影 */
+  border-radius: 2px;  /* 可选：为图片添加圆角效果 */
+}
+
+figure {
+  box-sizing: border-box;
+  display: inline-block;
+  margin: 0;
+  max-width: 100%;
+  box-shadow: 0 4px 8px rgba(255, 255, 255, 0.5); /* 白色轻微阴影 */
+  border-radius: 2px;  /* 可选：为图片添加圆角效果 */
+}
+
+figure img {
+  max-height: 500px;
+  box-shadow: 0 4px 8px rgba(255, 255, 255, 0.5); /* 白色轻微阴影 */
+  border-radius: 2px;  /* 可选：为图片添加圆角效果 */
 }

@@ -1,135 +1,146 @@
-# Archie - Hugo theme
-Archie is a minimal and clean theme for hugo with a markdown-ish UI.
+# Lumen - Hugo 主题
+Lumen 是一个简洁清新的 Hugo 主题，具有类 Markdown 风格的用户界面。
 
-Forked from [Ezhil Theme](https://github.com/vividvilla/ezhil)
+从 [Archie 主题](https://github.com/athul/archie) 分支而来。
 
-## Demo
-
-[Check the Demo](https://athul.github.io/archie/) hosted on GitHub Pages :smile: . You can find the source code to that in the `site` branch of this repository
-
+## 演示
 ![](/images/theme.png)
 ![](/images/archie-dark.png)
-## Feature
-- Google Analytics Script
-- Callouts
-- Tags
-- Auto Dark Mode(based on system theme)
-- Dark/Light Mode toggle
-- tl:dr; frontamatter
-- Table of contents
-- Cache busting for CSS files
-- Disqus Comments
 
-## Installation
-In your Hugo website directory, create a new folder named theme and clone the repo
+## 特性
+- Google Analytics 脚本
+- 提示框
+- 标签
+- 自动暗黑模式（根据系统主题）
+- 暗/亮模式切换
+- tldr; 前端数据
+- 目录生成
+- CSS 文件的缓存破坏
+- Disqus 评论
+- 支持本地 Hitokoto
+- 支持中文化
+- 支持图片自定义大小
+- 支持网易云外置播放器
+
+## 安装
+在 Hugo 网站目录中，创建一个新的文件夹命名为 `theme`，然后克隆仓库：
 ```bash
 $ mkdir themes
 $ cd themes
-$ git clone https://github.com/athul/archie.git
+$ git clone https://github.com/Elonisme/lumen.git
 ```
-Edit the `config.toml` file with `theme="archie"`
-For more information read the official [setup guide](https://gohugo.io/installation/) of Hugo.
+编辑 `config.toml` 文件，设置 `theme="archie"`。
+更多信息请参阅 Hugo 的官方 [安装指南](https://gohugo.io/installation/)。
 
-If you encounter any issues with Google Analytics, update Hugo to v0.125.0 or
-later and make sure your using the latest version of the theme.
+如果遇到 Google Analytics 问题，请将 Hugo 更新到 v0.125.0 或更高版本，并确保使用最新的主题版本。
 
-## Writing Posts
-Create a new `.md` file in the *content/posts* folder
+## 撰写文章
+在 *content/posts* 文件夹中创建一个新的 `.md` 文件：
 ```yml
 ---
-title: Title of the post
+title: 文章标题
 description:
 date:
-tldr: (optional)
-draft: true/false (optional)
-tags: [tag names] (optional)
-toc: true/false (optional)
+tldr: (可选)
+draft: true/false (可选)
+tags: [标签名] (可选)
+toc: true/false (可选)
 ---
 ```
 
-## Credits
-Forked from [Ezhil Theme](https://github.com/vividvilla/ezhil) and Licensed under MIT License
-Inspired by design of blog.jse.li
+## 贡献
+从 [Archie 主题](https://github.com/athul/archie.git) 分支而来，并遵循 MIT 许可证。
+灵感来源于 blog.jse.li 的设计。
 
 ----
 
-## Config Options
+## 配置选项
 
-### Custom CSS
-Custom CSS files can be included though the `customcss` config parameter.
+### 自定义 CSS
+可以通过 `customcss` 配置参数来引入自定义 CSS 文件。
 
-Note: CSS files should be placed under the `assets` directory e.g. `assets/css/first.css`.
+注意：CSS 文件应放置在 `assets` 目录下，例如 `assets/css/first.css`。
 
 ```toml
 [params]
 	customcss = ["css/first.css", "css/second.css"]
 ```
 
-### Callouts
+### 提示框
 
-There are five different types of callout, including this themes original callout and a custom one as well. These callouts are compatible with both light and dark theme modes. 
+主题提供了五种不同类型的提示框，包括原始的提示框和自定义提示框。这些提示框兼容暗黑模式和亮模式。
 
-![Screenshot from 2025-01-04 19-22-43](https://github.com/user-attachments/assets/bcaf7c3c-2339-449f-8bcb-8a2906d7ddcf)
+![截图](https://github.com/user-attachments/assets/bcaf7c3c-2339-449f-8bcb-8a2906d7ddcf)
 
+#### 原始
 
-#### Original
-
-This steup is to ensure backwards compatibility for previous callouts.
+此设置确保与之前的提示框保持向后兼容。
 
 ```markdown                                                                                                                                                                                                    
-{{< callout emoji="⚡️" text="Original callout." >}}
+{{< callout emoji="⚡️" text="原始提示框。" >}}
 ```
 
-#### Alert
+#### 警告
 ```markdown
-{{< callout type="alert" text="This is an alert callout." >}}
+{{< callout type="alert" text="这是一个警告提示框。" >}}
 ```
 
-#### Custom
+#### 自定义
 
-This include the ability to set your own callout emoji, title, and css style element.
-
-```markdown
-{{< callout type="custom" emoji="⚡️" title="Custom callout" text="This is custom text for a custom callout." style="background-color: transparent; border: 3px solid #d340e0;" >}}
-```
-
-#### Tip
+包括设置自定义的提示框 emoji、标题和 CSS 样式。
 
 ```markdown
-{{< callout type="tip" text="This is a tip callout." >}}
+{{< callout type="custom" emoji="⚡️" title="自定义提示框" text="这是自定义提示框的文本。" style="background-color: transparent; border: 3px solid #d340e0;" >}}
 ```
 
-#### Warning
+#### 提示
 
 ```markdown
-{{< callout type="warning" text="This is a warning callout." >}}
+{{< callout type="tip" text="这是一个提示提示框。" >}}
 ```
 
-## Config of the Demo Site
+#### 警告
+
+```markdown
+{{< callout type="warning" text="这是一个警告提示框。" >}}
+```
+
+#### 网易云外置音乐播放器
+```markdown
+{{< music id="5007195" >}}
+```
+
+#### 图片自定义大小
+```markdown
+{{< myimg src="/imgs/yangwenli.jpg" alt="杨威利" width="300" height="200" >}}
+```
+
+## 演示网站的配置
 
 ```toml
-baseURL = "https://athul.github.io/archie/"
-languageCode = "en-us"
-title = "Archie"
+baseURL = "https://xxxx.github.io/xxxx/"
+languageCode = "zh-cn"
+title = "Lumen"
 theme="archie"
-copyright = "© Athul"
-# Code Highlight
+copyright = "© XXXX"
+# 代码高亮
 pygmentsstyle = "monokai"
 pygmentscodefences = true
 pygmentscodefencesguesssyntax = true
 
 disqusShortname = "yourDisqusShortname"
 
-paginate=3 # articles per page
+paginate=3 # 每页文章数
 
 [params]
-	mode="auto" # color-mode → light,dark,toggle or auto
-	useCDN=false # don't use CDNs for fonts and icons, instead serve them locally.
-	subtitle = "Minimal and Clean [blog theme for Hugo](https://github.com/athul/archie)"
-	mathjax = true # enable MathJax support
-	katex = true # enable KaTeX support
+	mode="auto" # 颜色模式 → light, dark, toggle 或 auto
+	useCDN=false # 不使用 CDN 提供字体和图标，而是本地托管
+	subtitle = "简洁清新的 [Hugo 博客主题](https://github.com/athul/archie)"
+	mathjax = true # 启用 MathJax 支持
+	katex = true # 启用 KaTeX 支持
+	enableHitokoto = true # 启用 Hitokoto 支持
 
-# Social Tags
+# 社交标签
 
 [[params.social]]
 name = "GitHub"
@@ -146,30 +157,23 @@ name = "GitLab"
 icon = "gitlab"
 url = "https://gitlab.com/athul/"
 
-# Main menu Items
-
 [[menu.main]]
-name = "Home"
+name = "主页"
 url = "/"
 weight = 1
 
 [[menu.main]]
-name = "All posts"
+name = "文章集"
 url = "/posts"
 weight = 2
 
 [[menu.main]]
-name = "About"
-url = "/about"
+name = "分类"
+url = "/tags"
 weight = 3
 
 [[menu.main]]
-name = "Tags"
-url = "/tags"
+name = "关于"
+url = "/about"
 weight = 4
 ```
----
-
-If you liked my work please consider supporting me on [BuymeACoffee](https://www.buymeacoffee.com/athulca)
-
-<a href="https://www.buymeacoffee.com/athulca" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-red.png" alt="Buy Me A Coffee" height="41" width="174" ></a>

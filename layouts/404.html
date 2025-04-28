@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+  {{ partial "header.html" . }}
+  <body>
+    <div class="content">
+      {{ partial "head.html" . }}
+      <main class="list">
+        <div class="site-description">
+          <h1>404 - 页面未找到</h1>
+          <p>很抱歉，您访问的页面不存在。</p>
+          <a class="readmore" href="{{ "/" | relURL }}">返回首页 ⟶</a>
+        </div>
+      </main>
+      {{ partial "footer.html" . }}
+    </div>
+  </body>
+</html>

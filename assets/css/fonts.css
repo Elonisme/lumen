@@ -39,3 +39,14 @@
        url('../fonts/ibm-plex-mono-v6-latin-500italic.ttf') format('truetype'), /* Safari, Android, iOS */
        url('../fonts/ibm-plex-mono-v6-latin-500italic.svg#IBMPlexMono') format('svg'); /* Legacy iOS */
 }
+
+/* Noto Sans SC Regular - Chinese Simplified */
+@font-face {
+  font-display: swap;
+  font-family: 'Noto Sans SC';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../fonts/NotoSansSC-Regular.woff2') format('woff2'),
+       url('../fonts/NotoSansSC-Regular.ttf') format('truetype');
+  unicode-range: U+4E00-9FFF; /* 中文字符范围 */
+}

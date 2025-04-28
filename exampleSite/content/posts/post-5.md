@@ -1,75 +1,17 @@
 ---
-title: "Typography"
-date: 2018-03-18T12:13:38+05:30
+title: "努力从不白费"
+date: 2025-04-28
+summary: "坚持和努力是通向成功的关键，努力从不白费。"
 ---
 
-Lid est laborum et dolorum fuga. Et harum quidem rerum facilis est et expeditasi distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihilse impedit quo minus id quod amets untra dolor amet sad. Sed ut perspser iciatis unde omnis iste natus error sit voluptatem accusantium doloremque laste. Dolores sadips ipsums sits.
+## 努力从不白费
 
-# Heading 1
+每一滴汗水，都是通向成功的阶梯。无论今天的努力是否得到即时的回报，只要你坚持，总会迎来属于你的春天。
 
-Lid est laborum et dolorum fuga. Et harum quidem rerum facilis est et expeditasi distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihilse impedit quo minus id quod amets untra dolor amet sad. Sed ut perspser iciatis unde omnis iste natus error sit voluptatem accusantium doloremque laste. Dolores sadips ipsums sits.
+### 成功是耐心的结果
 
-## Heading 2
+耐心和毅力是成功的关键。不要急于求成，脚踏实地，每一次付出都会让你离成功更进一步。
 
-Lid est laborum et dolorum fuga. Et harum quidem rerum facilis est et expeditasi distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihilse impedit quo minus id quod amets untra dolor amet sad. Sed ut perspser iciatis unde omnis iste natus error sit voluptatem accusantium doloremque laste. Dolores sadips ipsums sits.
+相信努力的力量，未来一定会因你的坚持而更加美好。
 
-### Heading 3
-
-Lid est laborum et dolorum fuga. Et harum quidem rerum facilis est et expeditasi distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihilse impedit quo minus id quod amets untra dolor amet sad. Sed ut perspser iciatis unde omnis iste natus error sit voluptatem accusantium doloremque laste. Dolores sadips ipsums sits.
-
-#### Heading 4
-
-Lid est laborum et dolorum fuga. Et harum quidem rerum facilis est et expeditasi distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihilse impedit quo minus id quod amets untra dolor amet sad. Sed ut perspser iciatis unde omnis iste natus error sit voluptatem accusantium doloremque laste. Dolores sadips ipsums sits.
-
-##### Heading 5
-
-Lid est laborum et dolorum fuga. Et harum quidem rerum facilis est et expeditasi distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihilse impedit quo minus id quod amets untra dolor amet sad. Sed ut perspser iciatis unde omnis iste natus error sit voluptatem accusantium doloremque laste. Dolores sadips ipsums sits.
-
-###### Heading 6
-
-Lid est laborum et dolorum fuga. Et harum quidem rerum facilis est et expeditasi distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihilse impedit quo minus id quod amets untra dolor amet sad. Sed ut perspser iciatis unde omnis iste natus error sit voluptatem accusantium doloremque laste. Dolores sadips ipsums sits.
-
-## Typography
-
-Lid est laborum et dolorum fuga, This is [an example](http://example.com/ "Title") inline link. Et harum quidem rerum facilis, **This is bold** and *emphasis* cumque nihilse impedit quo minus id quod amets untra dolor amet sad. While this is `code block()` and following is a `pre` tag
-
-	print 'this is pre tag'
-
-Following is the syntax highlighted code block
-
-```go
-func getCookie(name string, r interface{}) (*http.Cookie, error) {
-	rd := r.(*http.Request)
-	cookie, err := rd.Cookie(name)
-	if err != nil {
-		return nil, err
-	}
-	return cookie, nil
-}
-
-func setCookie(cookie *http.Cookie, w interface{}) error {
-	// Get write interface registered using `Acquire` method in handlers.
-	wr := w.(http.ResponseWriter)
-	http.SetCookie(wr, cookie)
-	return nil
-}
-```
-
-This is blockquote, Will make it *better now*
-
-> 'I want to do with you what spring does with the cherry trees.' <cite>cited ~Pablo Neruda</cite>*
-
-
-> Et harum quidem *rerum facilis* est et expeditasi distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihilse impedit
-
-Unordered list
-
-*   Red
-*   Green
-*   Blue
-
-Ordered list
-
-1.	Red
-2.  Green
-3.  Blue
+> "成功属于那些不断努力、不轻言放弃的人。" —— 未知

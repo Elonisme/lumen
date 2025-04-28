@@ -6,7 +6,9 @@
       <div class="post-content">
         <div class="title">
           <h1 class="title">{{ .Title }}</h1>
-          <div class="meta">Posted on {{ dateFormat ":date_medium" .Date }}{{ if .Draft }} <span class="draft-label">DRAFT</span> {{ end }}</div>
+          <div class="meta">发布于 {{ dateFormat "2006年1月2日" .Date }}<br>
+            {{ if .Lastmod }}最后修改于 {{ .Lastmod.Format "2006年1月2日" }} {{ i18n .Lastmod.Weekday }}{{ end }}
+            {{ if .Draft }} <span class="draft-label">DRAFT</span> {{ end }}</div>
         </div>
         {{ if isset .Params "tldr" }}
         <div class="tldr">
@@ -34,7 +36,7 @@
       <!-- TOC -->
       {{ if isset .Params "toc" }}
       <div class="toc">
-        <strong>Table of contents:</strong>
+        <strong>目录:</strong>
         {{ .TableOfContents }}
       </div>
       {{ end }}

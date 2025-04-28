@@ -1,0 +1,6 @@
+<script type="text/javascript">
+    var name = '{{ .Get "name" }}';
+    var domain = '{{ .Get "domain" }}';
+    document.write('<a href="mailto:' + name + '@' + domain + '">' + name + '@' + domain + '</a>');
+</script>
+  

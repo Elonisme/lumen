@@ -8,16 +8,21 @@
 }
 html {
   color: #232333;
-  font-family: 'Roboto Mono', monospace;
+  font-family: 'Roboto Mono', 'Noto Sans SC', 'Microsoft YaHei', 'PingFang SC', 'Source Han Sans', sans-serif;
   font-size: 15px;
   line-height: 1.6em;
 }
 body{
   display: block;
   margin: 8px;
+  background-color: #FFFACD;
 }
 * {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+article {
+  background-color: #FFFACD;
 }
 
 ::selection {
@@ -26,7 +31,7 @@ body{
 }
 
 p {
-  font-family: 'Fira Sans', sans-serif;
+  font-family: 'Fira Sans', 'Noto Sans SC', 'Microsoft YaHei', 'PingFang SC', 'Source Han Sans', sans-serif;
   line-height: 1.5;
 }
 
@@ -69,6 +74,8 @@ ul > li::before {
 img {
   border: 3px solid #ececec;
   max-width: 100%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* 增加阴影效果 */
+  border-radius: 2px;  /* 可选：为图片添加圆角效果 */
 }
 
 figure {
@@ -76,11 +83,16 @@ figure {
   display: inline-block;
   margin: 0;
   max-width: 100%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* 增加阴影效果 */
+  border-radius: 2px;  /* 可选：为图片添加圆角效果 */
 }
 
 figure img {
   max-height: 500px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* 增加阴影效果 */
+  border-radius: 2px;  /* 可选：为图片添加圆角效果 */
 }
+
 
 @media screen and (min-width: 600px) {
   figure {
@@ -88,39 +100,109 @@ figure img {
   }
 }
 
+/* 手机端，默认隐藏目录 */
+@media (max-width: 768px) {
+  .toc {
+    display: none; /* 默认隐藏目录 */
+  }
+  .toc-container.active .toc {
+    display: block; /* 点击后显示目录 */
+  }
+}
+
+
 figure h4 {
   font-size: 1rem;
   margin: 0;
   margin-bottom: 1em;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* 增加阴影效果 */
+  border-radius: 2px;  /* 可选：为图片添加圆角效果 */
 }
 figure h4::before {
   content: '↳ ';
 }
 
 /* Code blocks */
-code {
-  background-color: #f1f1f1;
-  padding: .1em .2em;
-}
-
 pre {
-  background-color: #ececec;
-  line-height: 1.4;
-  overflow-x: auto;
+  position: relative;
+  background-color: #2d2d2d;
+  color: #dcdcdc;
   padding: 1em;
+  border-radius: 10px;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 1rem;
+  line-height: 1.5;
+  overflow-x: auto;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.3);
+  margin: 1.5em 0;
 }
 
-.highlight pre ::selection {
-  background: rgba(255, 255, 255, 0.2);
-  color: inherit;
+/* 代码内部样式 */
+code {
+  background-color: dodgerblue;
+  color: #f8f8f2;
+  border-radius: 4px;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 1rem;
 }
 
-pre code {
-  background-color: transparent;
-  color: inherit;
-  font-size: 100%;
-  padding: 0;
+/* 复制按钮样式 */
+.copy-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  padding: 5px 12px;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
+
+.copy-button:hover {
+  background-color: #45a049;
+  opacity: 1;
+}
+
+/* Toast 通知样式 */
+.toast {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  padding: 12px 24px;
+  border-radius: 10px;
+  font-size: 0.95rem;
+  background: linear-gradient(135deg, #ffffff, #e8e8e8);
+  color: #333;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  transform: translateY(-30px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+  z-index: 9999;
+  pointer-events: none;
+}
+
+/* Toast出现时 */
+.toast.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* 响应式调整：对于小屏幕设备隐藏圆点和按钮 */
+@media (max-width: 768px) {
+  pre::before {
+    display: none;
+  }
+  .copy-button {
+    top: 5px;
+    right: 5px;
+    font-size: 0.8rem;
+    padding: 3px 8px;
+  }
+}
+
 
 /* Containers */
 .content {
@@ -173,7 +255,7 @@ h6::before { color: var(--maincolor); content: '###### '; }
 }
 
 .toc {
-  background-color: #ececec;
+  background-color: #98FB98;
   border-radius: 5px;
   color: #232333;
   flex: 0 0 auto;
