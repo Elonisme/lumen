@@ -393,12 +393,12 @@ svg{
   background: black;
   border-radius: 0 0 0.25rem 0.25rem;
   color: white;
-  font-size: 12px;
+  font-size: 10px;
   letter-spacing: 0.025rem;
   padding: 0.1rem 0.5rem;
   position: absolute;
-  right: 1rem;
-  text-align: right;
+  left: 1rem; /* 改为左上角 */
+  text-align: left; /* 文字左对齐 */
   text-transform: uppercase;
   top: 0;
 }
@@ -453,6 +453,11 @@ color: whitesmoke ;
   content: 'TS';
   background: #3178C6;
   color: #fff;
+}
+.highlight pre code[class*='language-c']::before {
+  content: 'C';
+  background: #00599C; /* C 语言的蓝色 */
+  color: white;
 }
 
 /* table */
