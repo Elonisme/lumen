@@ -1,47 +1,58 @@
-baseURL = "https://example.com"
-languageCode = "en-us"
-title = "Archie"
-theme="archie"
-copyright = "© Athul"
+baseURL = "http://localhost"
+languageCode = "zh-cn"
+title = "Lumen"
+theme="lumen"
+copyright = "© XXXX"
+# 代码高亮
 pygmentsstyle = "monokai"
 pygmentscodefences = true
 pygmentscodefencesguesssyntax = true
+
+# disqusShortname = "yourDisqusShortname"
+
+pagination.pagerSize=3 # 每页文章数
+
 [params]
-	mode="auto"
-	useCDN=false
-	subtitle = "Minimal and Clean [blog theme for Hugo](https://github.com/athul/archie)"
+	mode="toggle" # 颜色模式 → light, dark, toggle 或 auto
+	useCDN=false # 不使用 CDN 提供字体和图标，而是本地托管
+	subtitle = "简洁清新的Hugo 博客主题"
+	mathjax = true # 启用 MathJax 支持
+	katex = true # 启用 KaTeX 支持
+	enableHitokoto = true # 启用 Hitokoto 支持
+
+# 社交标签
 
 [[params.social]]
 name = "GitHub"
 icon = "github"
-url = "https://github.com/athul/archie"
+url = "https://github.com/"
 
 [[params.social]]
 name = "Twitter"
 icon = "twitter"
-url = "https://twitter.com/athulcajay/"
+url = "https://twitter.com/"
 
 [[params.social]]
 name = "GitLab"
 icon = "gitlab"
-url = "https://gitlab.com/athul/"
+url = "https://gitlab.com/"
 
 [[menu.main]]
-name = "Home"
+name = "主页"
 url = "/"
 weight = 1
 
 [[menu.main]]
-name = "All posts"
+name = "文章集"
 url = "/posts"
 weight = 2
 
 [[menu.main]]
-name = "About"
-url = "/about"
+name = "分类"
+url = "/tags"
 weight = 3
 
 [[menu.main]]
-name = "Tags"
-url = "/tags"
+name = "关于"
+url = "/about"
 weight = 4

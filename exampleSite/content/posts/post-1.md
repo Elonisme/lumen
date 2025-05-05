@@ -15,3 +15,60 @@ summary: "每一天都是一个新的开始，让我们设定小目标，逐步�
 让我们每天保持积极向上的态度，迎接每一个晨曦，迈出坚定的步伐！
 
 > 只要你不放弃，总有一天会到达理想的彼岸。
+
+好的，以下是一些示例代码块，在你的 Hugo 主题中应用了上述改进后的 CSS 配置：
+
+### 示例 1: JavaScript 代码块
+
+```js
+function greet() {
+  console.log("Hello, world!");
+}
+greet();
+```
+
+### 示例 2: YAML 配置文件
+
+```yaml
+server:
+  port: 8080
+  host: 127.0.0.1
+```
+
+### 示例 3: Shell 脚本
+
+```bash
+#!/bin/bash
+echo "Hello, shell!"
+```
+
+### 示例 4: Python 代码
+
+```python
+def greet():
+    print("Hello, Python!")
+
+greet()
+```
+
+### 示例 5: JSON 数据
+
+```json
+{
+  "name": "John Doe",
+  "age": 30,
+  "city": "New York"
+}
+```
+
+---
+
+### 解释：
+
+1. **JavaScript 代码块**：标签 `JS` 使用了 `#f7df1e` 背景色和黑色文字。
+2. **YAML 配置文件**：标签 `YAML` 使用了 `#f71e6a` 背景色和白色文字。
+3. **Shell 脚本**：标签 `Shell` 使用了 `#4eaa2c` 背景色和白色文字。
+4. **Python 代码**：标签 `Python` 使用了 `#306998` 背景色和白色文字。
+5. **JSON 数据**：标签 `JSON` 使用了 `#0366d6` 背景色和白色文字。
+
+每个代码块顶部都会有一个小标签，标识对应的语言类型（例如 `JS`、`YAML`、`Shell` 等），并且背景色、文字色和标签的阴影效果使代码块看起来更加现代和美观。
